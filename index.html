@@ -3,78 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pocatello Chamber of Commerce | Home</title>
-  <meta name="description" content="Pocatello Chamber of Commerce home page promoting local businesses, events, and community development.">
+  <title>WDD 231 | Paxton Porter | Home</title>
+  <meta name="description" content="Personal WDD 231 course home page for Paxton Porter featuring coursework, navigation, and certificate courses.">
   <meta name="author" content="Paxton Porter">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <script src="scripts/navigation.js" defer></script>
   <script src="scripts/home.js" defer></script>
 </head>
 <body>
   <header>
-    <div class="brand">
-      <span class="brand-name">Pocatello Chamber</span>
+    <div class="site-brand">
+      <img src="images/2407.jpg" alt="Site logo" width="40" height="40">
+      <span>Paxton Porter</span>
     </div>
 
-    <button id="menu" aria-label="Open navigation menu"></button>
+    <button id="menu" aria-label="Toggle navigation"></button>
 
     <nav class="navigation">
       <ul>
         <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
+        <li><a href="chamber.html">Chamber</a></li>
+        <li><a href="final.html">Final</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <img src="images/hero.jpg" alt="Downtown Pocatello city view">
-      <div class="hero-content">
-        <h1>Pocatello Chamber of Commerce</h1>
-        <p>Connecting businesses, strengthening community, and encouraging growth.</p>
-        <a class="button" href="join.html">Join the Chamber</a>
+    <h1>Home</h1>
+
+    <div class="main-grid">
+      <section class="card">
+        <h2>About Me</h2>
+        <p>Hello, my name is Paxton Porter. I am studying web development and programming. This page highlights my coursework and projects for WDD 231.</p>
+      </section>
+
+      <section class="card">
+        <h2>Student Photo</h2>
+        <img src="images/profile-picture.jpg" alt="Photo of Paxton Porter" width="300" height="400">
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Web and Computer Programming Certificate</h2>
+
+      <div class="filters">
+        <button id="allBtn" type="button">All Courses</button>
+        <button id="wddBtn" type="button">WDD Courses</button>
+        <button id="cseBtn" type="button">CSE Courses</button>
       </div>
-    </section>
 
-    <section class="home-grid">
-      <section class="card">
-        <h2>Upcoming Events</h2>
-        <ul>
-          <li>March 18: Small Business Networking Lunch</li>
-          <li>March 24: Downtown Development Workshop</li>
-          <li>April 2: Spring Community Business Expo</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>Current Weather</h2>
-        <p><strong>Temperature:</strong> 48°F</p>
-        <p><strong>Conditions:</strong> Mostly Sunny</p>
-        <p><strong>Forecast:</strong> Mild afternoon with light wind.</p>
-      </section>
-
-      <section class="card">
-        <h2>Community Spotlight</h2>
-        <p>Pocatello continues to support entrepreneurs through local events, community outreach, and growing partnerships between residents and businesses.</p>
-      </section>
-    </section>
-
-    <section class="spotlights card">
-      <h2>Business Spotlights</h2>
-      <div id="spotlight-container" class="spotlight-container"></div>
+      <div id="course-container" class="course-container"></div>
+      <p id="credits"></p>
     </section>
   </main>
 
   <footer>
-    <p><strong>Pocatello Chamber of Commerce</strong></p>
-    <p>123 Main Street, Pocatello, ID 83201</p>
-    <p>(208) 555-1234 | info@pocatellochamber.org</p>
-    <p>&copy; 2026 Paxton Porter | WDD231 Chamber Project</p>
+    <div class="social">
+      <a href="https://github.com/paxpor" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.facebook.com/paxton.porter.362184/" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+
+    <p>&copy; <span id="currentyear"></span> Check Your Understanding | Paxton Porter | Idaho, USA</p>
+
+    <p id="lastModified"></p>
   </footer>
 </body>
 </html>

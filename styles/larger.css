@@ -10,6 +10,10 @@
     display: none;
   }
 
+  .navigation {
+    align-self: center;
+  }
+
   .navigation ul {
     display: flex;
     justify-content: flex-end;
@@ -20,46 +24,13 @@
     display: block;
   }
 
-  .hero {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .hero-content {
-    margin-top: 0;
-  }
-
-  .home-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .discover-layout {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 1rem;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #member-container.grid-view {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .join-layout {
+  .main-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
   }
 
-  .membership-cards {
-    align-content: start;
-  }
-
-  .spotlight-container {
+  .course-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }

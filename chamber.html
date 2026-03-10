@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pocatello Chamber of Commerce | Home</title>
+  <meta name="description" content="Pocatello Chamber of Commerce home page promoting local businesses, events, and community development.">
+  <meta name="author" content="Paxton Porter">
+
+  <link rel="stylesheet" href="styles/chamber-base.css">
+  <link rel="stylesheet" href="styles/chamber-larger.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/home.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="brand-name">Pocatello Chamber</span>
+    </div>
+
+    <button id="menu" aria-label="Open navigation menu"></button>
+
+    <nav class="navigation">
+      <ul>
+        <li><a class="active" href="chamber.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Downtown Pocatello city view">
+      <div class="hero-content">
+        <h1>Pocatello Chamber of Commerce</h1>
+        <p>Connecting businesses, strengthening community, and encouraging growth.</p>
+        <a class="button" href="join.html">Join the Chamber</a>
+      </div>
+    </section>
+
+    <section class="home-grid">
+      <section class="card">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>March 18: Small Business Networking Lunch</li>
+          <li>March 24: Downtown Development Workshop</li>
+          <li>April 2: Spring Community Business Expo</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Current Weather</h2>
+        <p><strong>Temperature:</strong> 48°F</p>
+        <p><strong>Conditions:</strong> Mostly Sunny</p>
+        <p><strong>Forecast:</strong> Mild afternoon with light wind.</p>
+      </section>
+
+      <section class="card">
+        <h2>Community Spotlight</h2>
+        <p>Pocatello continues to support entrepreneurs through local events, community outreach, and growing partnerships between residents and businesses.</p>
+      </section>
+    </section>
+
+    <section class="spotlights card">
+      <h2>Business Spotlights</h2>
+      <div id="spotlight-container" class="spotlight-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Pocatello Chamber of Commerce</strong></p>
+    <p>123 Main Street, Pocatello, ID 83201</p>
+    <p>(208) 555-1234 | info@pocatellochamber.org</p>
+    <p>&copy; 2026 Paxton Porter | WDD231 Chamber Project</p>
+  </footer>
+</body>
+</html>
