@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Gem State Bakery",
+    "address": "101 Main St, Pocatello, ID",
+    "phone": "(208) 555-1111",
+    "website": "https://example.com",
+    "image": "images/bakery.webp",
+    "membership": "Gold"
+  },
+  {
+    "name": "Portneuf Fitness",
+    "address": "245 Center Ave, Pocatello, ID",
+    "phone": "(208) 555-2222",
+    "website": "https://example.com",
+    "image": "images/portneuf.jpeg",
+    "membership": "Silver"
+  },
+  {
+    "name": "High Desert Tech",
+    "address": "78 Innovation Way, Pocatello, ID",
+    "phone": "(208) 555-3333",
+    "website": "https://example.com",
+    "image": "images/high_desert.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "Snake River Prints",
+    "address": "510 Market Blvd, Pocatello, ID",
+    "phone": "(208) 555-4444",
+    "website": "https://example.com",
+    "image": "images/snake_river.png",
+    "membership": "NP"
+  },
+  {
+    "name": "Bannock Event Rentals",
+    "address": "900 Cedar St, Pocatello, ID",
+    "phone": "(208) 555-5555",
+    "website": "https://example.com",
+    "image": "images/bannock-county.jpg",
+    "membership": "Silver"
+  }
+]

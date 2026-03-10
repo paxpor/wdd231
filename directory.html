@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pocatello Chamber of Commerce | Directory</title>
+  <meta name="description" content="Directory of chamber member businesses and organizations in Pocatello.">
+  <meta name="author" content="Paxton Porter">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="brand-name">Pocatello Chamber</span>
+    </div>
+
+    <button id="menu" aria-label="Open navigation menu"></button>
+
+    <nav class="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a class="active" href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="directory-header">
+      <h1>Member Directory</h1>
+      <div class="view-buttons">
+        <button id="grid-view" type="button">Grid</button>
+        <button id="list-view" type="button">List</button>
+      </div>
+    </section>
+
+    <section id="member-container" class="grid-view"></section>
+  </main>
+
+  <footer>
+    <p><strong>Pocatello Chamber of Commerce</strong></p>
+    <p>123 Main Street, Pocatello, ID 83201</p>
+    <p>(208) 555-1234 | info@pocatellochamber.org</p>
+    <p>&copy; 2026 Paxton Porter | WDD231 Chamber Project</p>
+  </footer>
+</body>
+</html>
