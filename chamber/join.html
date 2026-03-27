@@ -6,6 +6,16 @@
   <title>Pocatello Chamber of Commerce | Join</title>
   <meta name="description" content="Join the Pocatello Chamber of Commerce and grow your business through networking and promotion.">
   <meta name="author" content="Paxton Porter">
+  <meta property="og:title" content="Join the Pocatello Chamber of Commerce">
+  <meta property="og:description" content="Join the Pocatello Chamber of Commerce to grow your business through networking, promotion, and community support.">
+  <meta property="og:image" content="https://paxpor.github.io/wdd231/chamber/images/hero.jpg">
+  <meta property="og:url" content="https://paxpor.github.io/wdd231/chamber/join.html">
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/chamber-base.css">
   <link rel="stylesheet" href="styles/chamber-larger.css">
@@ -36,55 +46,39 @@
       <h1>Join the Chamber</h1>
       <p>Become part of a network that supports local business growth, education, and community development.</p>
 
-      <form method="get" action="thankyou.html" class="join-form">
-        <label>
-          First Name
-          <input type="text" name="firstName" title="First Name" required>
-        </label>
+      <form method="get" action="thankyou.html">
 
-        <label>
-          Last Name
-          <input type="text" name="lastName" title="Last Name" required>
-        </label>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required autocomplete="given-name">
 
-        <label>
-          Organizational Title
-          <input type="text" name="orgTitle" title="Organization Title" pattern="[A-Za-z\s\-]{7,}">
-        </label>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" required autocomplete="family-name">
 
-        <label>
-          Email
-          <input type="email" name="email" title="Email Address" placeholder="example@email.com" required>
-        </label>
+        <label for="orgtitle">Organization Title</label>
+        <input type="text" id="orgtitle" name="orgtitle" autocomplete="organization-title">
 
-        <label>
-          Mobile Phone
-          <input type="tel" name="phone" title="Mobile Phone" required>
-        </label>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
 
-        <label>
-          Business / Organization Name
-          <input type="text" name="organization" title="Business Name" required>
-        </label>
+        <label for="phone">Mobile Phone</label>
+        <input type="tel" id="phone" name="phone" required autocomplete="tel">
 
-        <label>
-          Membership Level
-          <select name="membership" required>
-            <option value="">Select a membership level</option>
-            <option value="np">NP Membership</option>
-            <option value="silver">Silver Membership</option>
-            <option value="gold">Gold Membership</option>
-          </select>
-        </label>
+        <label for="orgname">Organization Name</label>
+        <input type="text" id="orgname" name="orgname" required autocomplete="organization">
 
-        <label>
-          Business Description
-          <textarea name="description" title="Business Description"></textarea>
-        </label>
+        <label for="membership">Membership Level</label>
+        <select id="membership" name="membership">
+          <option value="np">Non-Profit</option>
+          <option value="bronze">Bronze</option>
+          <option value="silver">Silver</option>
+          <option value="gold">Gold</option>
+        </select>
 
-        <input type="hidden" id="timestamp" name="timestamp">
+        <label for="description">Organization Description</label>
+        <textarea id="description" name="description"></textarea>
 
-        <input class="button" type="submit" value="Submit Application">
+        <button type="submit">Apply for Membership</button>
+
       </form>
     </section>
 
