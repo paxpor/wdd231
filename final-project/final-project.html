@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Grandpa & Son Workshop</title>
+  <meta name="author" content="Paxton Porter">
+  <meta name="description" content="Handmade pens, bowls, jewelry boxes and more — crafted by grandpa and grandson on the lathe.">
+  <link rel="stylesheet" href="styles/final-project.css">
+  <script defer src="scripts/final-project.js" ></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="Grandpa and Grandsonon Workshops logo" class="logo" />
+        <div>
+          <h1 class="site-title">Grandpa &amp; Grandson Workshop</h1>
+          <p class="site-tag">Handmade pens, bowls, jewelry boxes & more</p>
+        </div>
+      </div>
+
+      <button id="menu-btn" class="hamburger" aria-label="Open navigation" aria-expanded="false">
+        <span class="hamburger-box" aria-hidden="true">☰</span>
+      </button>
+    </div>
+
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#products" class="nav-link">Products</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <button id="cart-btn" class="cart-btn" aria-label="Open shopping cart">Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <picture>
+        <source media="(min-width:1000px)" src="images/pen_hero.webp">
+        <source media="(min-width:600px)" src="images/pen_hero.webp">
+        <img src="images/pen_hero.webp" loading="lazy" alt="Workshop bench with lathe and finished wooden items" class="hero-img">
+      </picture>
+      <div class="hero-content">
+        <h2>Small shop. Big heart.</h2>
+        <p>We make heirloom-quality pens, bowls, and jewelry boxes — each turned by hand on our family lathe.</p>
+        <a href="#products" class="btn primary">Shop Handmade Goods</a>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <h3>About Us</h3>
+      <div class="about-grid">
+        <div>
+          <h4>Our Story</h4>
+          <p>Grandpa taught grandson the art of turning. Together they blend traditional techniques with creative designs. Each piece is finished with care and built to last.</p>
+        </div>
+        <div>
+          <h4>Craftsmanship</h4>
+          <p>We select quality wood, stabilize where necessary, and hand-sand and finish each item. We stand behind our workmanship and offer a satisfaction guarantee.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section products">
+      <h3>Products</h3>
+      <div id="products-grid" class="grid"></div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h3>Contact & Custom Orders</h3>
+      <p>Interested in a custom item or a bulk order? Fill out the form and we'll get back to you within 48 hours.</p>
+
+      <form id="contact-form" class="contact-form">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="btn">Send Request</button>
+      </form>
+    </section>
+  </main>
+
+  <aside id="cart" class="cart" aria-hidden="true">
+    <div class="cart-inner">
+      <button id="close-cart" class="close-cart" aria-label="Close cart">✖</button>
+      <h4>Your Cart</h4>
+      <ul id="cart-items" class="cart-items"></ul>
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cart-total">$0.00</strong>
+      </div>
+      <button id="checkout-btn" class="btn primary">Checkout</button>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Grandpa &amp; Son Workshop</p>
+      <p>Last modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>
