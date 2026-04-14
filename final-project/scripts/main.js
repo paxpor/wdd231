@@ -1,152 +1,105 @@
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
+// ===== Footer =====
+document.getElementById('year')?.textContent = new Date().getFullYear();
+document.getElementById('lastModified')?.textContent = document.lastModified;
 
+// ===== NAV =====
 const menuBtn = document.getElementById('menu-btn');
 const nav = document.getElementById('site-nav');
 
 menuBtn?.addEventListener('click', () => {
   const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
   menuBtn.setAttribute('aria-expanded', String(!expanded));
-  nav?.classList.toggle('open');
+  nav.classList.toggle('open');
 });
 
-const products = [
-  {
-    id: 'pen-01',
-    title: 'Hand-turned Walnut Pen',
-    description: 'Smooth-writing rollerball pen, hand-finished.',
-    price: 48.00,
-    image: 'scripts/images/walnut_pen.png'
-  },
-  {
-    id: 'bowl-01',
-    title: 'Cherry Wood Bowl (Small)',
-    description: 'Delicately finished bowl, food-safe finish.',
-    price: 65.00,
-    image: 'scripts/images/cherry_wood_bowl.jpg'
-  },
-  {
-    id: 'jbox-01',
-    title: 'Jewelry Box with Inlay',
-    description: 'Keepsakes fit perfectly, soft velvet interior.',
-    price: 120.00,
-    image: 'scripts/images/small_jewelery_box.jpg'
-  },
-  {
-    id: 'pen-02',
-    title: 'Maple Slim Pen',
-    description: 'Lightweight slim pen with polished finish.',
-    price: 42.00,
-    image: 'scripts/images/maple_pen.jpg'
-  },
-  {
-    id: 'bowl-02',
-    title: 'Large Oak Serving Bowl',
-    description: 'Big and sturdy — great for salads or bread.',
-    price: 140.00,
-    image: 'scripts/images/large_oak_bowl.jpg'
-  }
-];
+// ===== LOCAL STORAGE =====
+function saveCart(cart) {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
 
+function loadCart() {
+  return JSON.parse(localStorage.getItem('cart')) || [];
+}
+
+let cart = loadCart();
+
+// ===== FETCH PRODUCTS =====
+async function loadProducts() {
+  try {
+    const response = await fetch('data/products.json');
+    const products = await response.json();
+    renderProducts(products);
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
+}
+
+// ===== DOM =====
 const productsGrid = document.getElementById('products-grid');
-const cartBtn = document.getElementById('cart-btn');
-const cartPane = document.getElementById('cart');
-const closeCartBtn = document.getElementById('close-cart');
 const cartCount = document.getElementById('cart-count');
-const cartItemsList = document.getElementById('cart-items');
-const cartTotalEl = document.getElementById('cart-total');
 
-let cart = [];
+// ===== RENDER =====
+function renderProducts(products) {
+  if (!productsGrid) return;
 
-function renderProducts() {
-  if(!productsGrid) return;
-  productsGrid.innerHTML = '';
-  products.forEach(p => {
-    const card = document.createElement('article');
-    card.className = 'temple-card product-card';
+  productsGrid.innerHTML = products.map(p => `
+    <article class="temple-card">
+      <img src="${p.image}" alt="${p.title}" class="product-image" loading="lazy">
+      <h4>${p.title}</h4>
+      <p>${p.description}</p>
+      <p><strong>$${p.price.toFixed(2)}</strong></p>
+      <button class="btn add-btn" data-id="${p.id}">Add</button>
+      <button class="btn view-btn" data-id="${p.id}">View</button>
+    </article>
+  `).join('');
 
-    card.innerHTML = `
-      <img class="product-image" src="${p.image}" alt="${p.title}" loading="lazy">
-      <div class="product-info">
-        <h4>${p.title}</h4>
-        <p>${p.description}</p>
-        <div class="product-actions">
-          <span style="font-weight:700;color:var(--accent)">$${p.price.toFixed(2)}</span>
-          <button class="btn add-btn" data-id="${p.id}" aria-label="Add ${p.title} to cart">Add</button>
-        </div>
-      </div>
-    `;
-    productsGrid.appendChild(card);
-  });
+  document.querySelectorAll('.add-btn').forEach(btn =>
+    btn.addEventListener('click', () => addToCart(btn.dataset.id, products))
+  );
 
-  document.querySelectorAll('.add-btn').forEach(btn => {
-    btn.addEventListener('click', () => addToCart(btn.dataset.id));
-  });
+  document.querySelectorAll('.view-btn').forEach(btn =>
+    btn.addEventListener('click', () => openModal(products.find(p => p.id === btn.dataset.id)))
+  );
 }
 
-function addToCart(id) {
-  const prod = products.find(p => p.id === id);
-  if(!prod) return;
-  const existing = cart.find(item => item.id === id);
-  if(existing) {
-    existing.qty += 1;
+// ===== CART =====
+function addToCart(id, products) {
+  const product = products.find(p => p.id === id);
+  const existing = cart.find(i => i.id === id);
+
+  if (existing) {
+    existing.qty++;
   } else {
-    cart.push({ id: prod.id, title: prod.title, price: prod.price, qty: 1 });
+    cart.push({ ...product, qty: 1 });
   }
-  updateCartUI();
-  openCart();
-}
 
-function removeFromCart(id) {
-  cart = cart.filter(item => item.id !== id);
+  saveCart(cart);
   updateCartUI();
 }
 
 function updateCartUI() {
-  cartCount.textContent = cart.reduce((s,i) => s + i.qty, 0);
-  cartItemsList.innerHTML = '';
-  let total = 0;
-  cart.forEach(item => {
-    total += item.price * item.qty;
-    const li = document.createElement('li');
-    li.innerHTML = `
-      <span>${item.title} x ${item.qty}</span>
-      <span>
-        $${(item.price * item.qty).toFixed(2)}
-        <button class="btn remove-item" data-id="${item.id}" aria-label="Remove ${item.title}">Remove</button>
-      </span>
-    `;
-    cartItemsList.appendChild(li);
-  });
-
-  document.querySelectorAll('.remove-item').forEach(b => {
-    b.addEventListener('click', () => removeFromCart(b.dataset.id));
-  });
-
-  cartTotalEl.textContent = '$' + total.toFixed(2);
+  if (!cartCount) return;
+  cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
 }
 
-function openCart(){ cartPane.classList.add('open'); cartPane.setAttribute('aria-hidden','false'); }
-function closeCart(){ cartPane.classList.remove('open'); cartPane.setAttribute('aria-hidden','true'); }
+// ===== MODAL =====
+const modal = document.getElementById('modal');
+const modalBody = document.getElementById('modal-body');
 
-cartBtn?.addEventListener('click', () => openCart());
-closeCartBtn?.addEventListener('click', () => closeCart());
+function openModal(product) {
+  modalBody.innerHTML = `
+    <h3>${product.title}</h3>
+    <img src="${product.image}" style="width:100%">
+    <p>${product.description}</p>
+    <p><strong>$${product.price}</strong></p>
+  `;
+  modal.classList.remove('hidden');
+}
 
-document.getElementById('checkout-btn')?.addEventListener('click', () => {
-  alert('Checkout is not implemented in this demo. Please contact us to complete your order.');
+document.getElementById('close-modal')?.addEventListener('click', () => {
+  modal.classList.add('hidden');
 });
 
-const contactForm = document.getElementById('contact-form');
-contactForm?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = contactForm.querySelector('#name').value.trim();
-  const email = contactForm.querySelector('#email').value.trim();
-  const message = contactForm.querySelector('#message').value.trim();
-  if(name && email && message) {
-    alert(`Thanks ${name}! We received your message and will respond shortly.`);
-    contactForm.reset();
-  }
-});
-
-renderProducts();
+// ===== INIT =====
+loadProducts();
 updateCartUI();

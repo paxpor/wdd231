@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Grand & Son's Workshop | Home</title>
-    <meta name="author" content="Paxton Porter">
-    <meta name="description" content="Handcrafted wooden creations made by a grandfather and grandson.">
+<title>Grand & Son's Workshop | Home</title>
+<meta name="author" content="Paxton Porter">
+<meta name="description" content="Handcrafted wooden creations made by a grandfather and grandson.">
 
-    <meta property="og:title" content="Grand & Son's Workshop">
-    <meta property="og:description" content="Handmade wood crafts built to last.">
-    <meta property="og:image" content="images/hero.jpg">
+<link rel="icon" href="images/logo.png">
+<link rel="stylesheet" href="styles/final-project.css">
+<script type="module" src="scripts/main.js"></script>
+</head>
 
-    <link rel="icon" href="images/logo.png">
-    <link rel="stylesheet" href="styles/final-project.css">
-    <script type="module" src="scripts/main.js"></script>
-  </head>
+<body>
 
-  <body>
+<header class="site-header">
+  <div class="header-inner">
+    <img src="images/logo.png" alt="Grand & Son's Workshop logo" class="logo">
+    <h1 class="site-title">Grand & Son's Workshop</h1>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <h1 class="site-title">Grand & Son's Workshop</h1>
+    <button id="menu-btn" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
 
-      <button id="menu-btn" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <nav id="site-nav" class="nav">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+<section class="hero">
+  <img src="images/hero.jpg" alt="Handcrafted wooden items">
+  <div class="hero-text">
+    <h2>Handcrafted with Tradition</h2>
+    <p>Built by hand. Built to last.</p>
+  </div>
+</section>
 
-  <main class="section">
-    <h2>Welcome</h2>
-    <p>We create handcrafted wooden goods with care and tradition.</p>
-  </main>
+<main class="section">
+  <h2>Welcome</h2>
+  <p>We create handcrafted wooden goods with care and tradition.</p>
+</main>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span></p>
-    <p>Last Modified: <span id="lastModified"></span></p>
-    <p><a href="attributions.html">Attributions</a></p>
-  </footer>
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span></p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+  <p><a href="attributions.html">Attributions</a></p>
+</footer>
 
-  </body>
+</body>
 </html>
