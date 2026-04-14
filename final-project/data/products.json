@@ -1,0 +1,107 @@
+[
+  {
+    "id": "pen-01",
+    "title": "Hand-turned Walnut Pen",
+    "description": "Smooth-writing rollerball pen, hand-finished.",
+    "price": 48.00,
+    "image": "images/walnut_pen.png"
+  },
+  {
+    "id": "pen-02",
+    "title": "Maple Slim Pen",
+    "description": "Lightweight slim pen with polished finish.",
+    "price": 42.00,
+    "image": "images/maple_pen.jpg"
+  },
+  {
+    "id": "pen-03",
+    "title": "Ebony Luxury Pen",
+    "description": "Dark hardwood pen with a premium feel.",
+    "price": 65.00,
+    "image": "images/walnut_pen.png"
+  },
+  {
+    "id": "pen-04",
+    "title": "Cherry Classic Pen",
+    "description": "Classic cherry wood pen with smooth ink flow.",
+    "price": 50.00,
+    "image": "images/maple_pen.jpg"
+  },
+  {
+    "id": "bowl-01",
+    "title": "Cherry Wood Bowl (Small)",
+    "description": "Delicately finished bowl, food-safe finish.",
+    "price": 65.00,
+    "image": "images/cherry_wood_bowl.jpg"
+  },
+  {
+    "id": "bowl-02",
+    "title": "Large Oak Serving Bowl",
+    "description": "Perfect for salads and family meals.",
+    "price": 140.00,
+    "image": "images/large_oak_bowl.jpg"
+  },
+  {
+    "id": "bowl-03",
+    "title": "Maple Decorative Bowl",
+    "description": "Bright wood grain, ideal for display.",
+    "price": 85.00,
+    "image": "images/cherry_wood_bowl.jpg"
+  },
+  {
+    "id": "bowl-04",
+    "title": "Walnut Serving Bowl",
+    "description": "Rich tones with a durable finish.",
+    "price": 120.00,
+    "image": "images/large_oak_bowl.jpg"
+  },
+  {
+    "id": "jbox-01",
+    "title": "Jewelry Box with Inlay",
+    "description": "Elegant box with velvet-lined interior.",
+    "price": 120.00,
+    "image": "images/small_jewelery_box.jpg"
+  },
+  {
+    "id": "jbox-02",
+    "title": "Compact Keepsake Box",
+    "description": "Small and perfect for treasured items.",
+    "price": 75.00,
+    "image": "images/small_jewelery_box.jpg"
+  },
+  {
+    "id": "jbox-03",
+    "title": "Deluxe Storage Box",
+    "description": "Spacious box with handcrafted lid.",
+    "price": 150.00,
+    "image": "images/small_jewelery_box.jpg"
+  },
+  {
+    "id": "set-01",
+    "title": "Pen & Box Gift Set",
+    "description": "Perfect gift set including pen and box.",
+    "price": 95.00,
+    "image": "images/walnut_pen.png"
+  },
+  {
+    "id": "set-02",
+    "title": "Bowl & Serving Set",
+    "description": "Matching bowls for elegant dining.",
+    "price": 180.00,
+    "image": "images/large_oak_bowl.jpg"
+  },
+  {
+    "id": "custom-01",
+    "title": "Custom Engraved Pen",
+    "description": "Personalized pen with custom engraving.",
+    "price": 70.00,
+    "image": "images/maple_pen.jpg"
+  },
+  {
+    "id": "custom-02",
+    "title": "Custom Wooden Bowl",
+    "description": "Made-to-order bowl with your specifications.",
+    "price": 130.00,
+    "image": "images/cherry_wood_bowl.jpg"
+  }
+]

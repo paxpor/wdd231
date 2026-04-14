@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Grand & Son's Workshop</title>
+<meta name="author" content="Paxton Porter">
+<meta name="description" content="Contact us for custom orders.">
+
+<link rel="stylesheet" href="styles/final-project.css">
+<script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <h1>Contact</h1>
+    <button id="menu-btn">☰</button>
+
+    <nav id="site-nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <h2>Custom Orders</h2>
+
+  <form method="get" action="thankyou.html" class="contact-form">
+    <label>Name</label>
+    <input name="name" required title="Enter your name">
+
+    <label>Email</label>
+    <input type="email" name="email" required title="Enter a valid email">
+
+    <label>Message</label>
+    <textarea name="message" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+  </form>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span></p>
+</footer>
+
+</body>
+</html>
