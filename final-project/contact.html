@@ -5,9 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Contact | Grand & Son's Workshop</title>
+<meta name="author" content="Paxton Porter">
+<meta name="description" content="Contact Grand & Son's Workshop for custom woodworking and handcrafted products.">
 
 <link rel="icon" href="images/logo.png">
-<link rel="stylesheet" href="styles/final-project.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/larger.css">
 <script type="module" src="scripts/main.js"></script>
 </head>
 
@@ -16,7 +19,7 @@
 <header class="site-header">
   <div class="header-inner">
     <h1>Contact</h1>
-    <button id="menu-btn">☰</button>
+    <button id="menu-btn" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
 
     <nav id="site-nav" class="nav">
       <a href="index.html">Home</a>
@@ -34,14 +37,15 @@
 
 <main class="section">
   <form method="get" action="thankyou.html" class="contact-form">
-    <label>Name</label>
-    <input name="name" required title="Enter your name">
 
-    <label>Email</label>
-    <input type="email" name="email" required title="Enter a valid email">
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name" required placeholder="Your name">
 
-    <label>Message</label>
-    <textarea name="message" required></textarea>
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" required placeholder="your@email.com">
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required placeholder="Your message"></textarea>
 
     <button type="submit" class="btn">Send</button>
   </form>
@@ -49,6 +53,8 @@
 
 <footer class="site-footer">
   <p>&copy; <span id="year"></span></p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+  <p><a href="attributions.html">Attributions</a></p>
 </footer>
 
 </body>

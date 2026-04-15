@@ -9,7 +9,14 @@
 <meta name="description" content="Handcrafted wooden creations made by a grandfather and grandson.">
 
 <link rel="icon" href="images/logo.png">
-<link rel="stylesheet" href="styles/final-project.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/larger.css">
+
 <script type="module" src="scripts/main.js"></script>
 </head>
 
@@ -17,7 +24,7 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <img src="images/logo.png" alt="Grand & Son's Workshop logo" class="logo">
+    <img src="images/logo.png" alt="Grand & Son's Workshop logo" class="logo" style="max-width: 120px; height: auto;">
     <h1 class="site-title">Grand & Son's Workshop</h1>
 
     <button id="menu-btn" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
@@ -31,17 +38,21 @@
   </div>
 </header>
 
-<section class="hero">
-  <img src="images/hero.jpg" alt="Handcrafted wooden items">
-  <div class="hero-text">
-    <h2>Handcrafted with Tradition</h2>
-    <p>Built by hand. Built to last.</p>
-  </div>
-</section>
+<main>
 
-<main class="section">
-  <h2>Welcome</h2>
-  <p>We create handcrafted wooden goods with care and tradition.</p>
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Handcrafted wooden items">
+    <div class="hero-text">
+      <h2>Handcrafted with Tradition</h2>
+      <p>Built by hand. Built to last.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Welcome</h2>
+    <p>We create handcrafted wooden goods with care and tradition.</p>
+  </section>
+
 </main>
 
 <footer class="site-footer">

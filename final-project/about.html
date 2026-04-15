@@ -5,9 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>About | Grand & Son's Workshop</title>
+<meta name="author" content="Paxton Porter">
+<meta name="description" content="Learn the story behind Grand & Son's Workshop and its woodworking tradition.">
 
 <link rel="icon" href="images/logo.png">
-<link rel="stylesheet" href="styles/final-project.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/larger.css">
 <script type="module" src="scripts/main.js"></script>
 </head>
 
@@ -16,7 +19,7 @@
 <header class="site-header">
   <div class="header-inner">
     <h1>About Us</h1>
-    <button id="menu-btn">☰</button>
+    <button id="menu-btn" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
 
     <nav id="site-nav" class="nav">
       <a href="index.html">Home</a>
@@ -38,6 +41,8 @@
 
 <footer class="site-footer">
   <p>&copy; <span id="year"></span></p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+  <p><a href="attributions.html">Attributions</a></p>
 </footer>
 
 </body>

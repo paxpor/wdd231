@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+  .header-inner {
+    flex-wrap: nowrap;
+  }
+
+  .nav {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .nav a {
+    padding: 0.5rem 1rem;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero img {
+    height: 400px;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+}

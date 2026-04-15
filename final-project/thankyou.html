@@ -2,18 +2,59 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Thank You</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thank You | Grand & Son's Workshop</title>
+<meta name="author" content="Paxton Porter">
+<meta name="description" content="Thank you for contacting Grand & Son's Workshop.">
+
+<link rel="icon" href="images/logo.png">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/larger.css">
+<script type="module" src="scripts/main.js"></script>
 </head>
 
 <body>
 
-<h1>Thank You!</h1>
+<header class="site-header">
+  <div class="header-inner">
+    <h1>Thank You</h1>
+    <button id="menu-btn" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
+
+    <nav id="site-nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <h2>Thank you for reaching out!</h2>
+  <p>We’ve received your message and will get back to you soon.</p>
+
+  <div id="form-data"></div>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span></p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+  <p><a href="attributions.html">Attributions</a></p>
+</footer>
 
 <script>
 const params = new URLSearchParams(window.location.search);
-document.write(`<p>Name: ${params.get("name")}</p>`);
-document.write(`<p>Email: ${params.get("email")}</p>`);
-document.write(`<p>Message: ${params.get("message")}</p>`);
+const container = document.getElementById("form-data");
+
+if (container) {
+  container.innerHTML = `
+    <h3>Your Submission:</h3>
+    <p><strong>Name:</strong> ${params.get("name")}</p>
+    <p><strong>Email:</strong> ${params.get("email")}</p>
+    <p><strong>Message:</strong> ${params.get("message")}</p>
+  `;
+}
 </script>
 
 </body>
