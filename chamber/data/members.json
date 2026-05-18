@@ -3,40 +3,56 @@
     "name": "Gem State Bakery",
     "address": "101 Main St, Pocatello, ID",
     "phone": "(208) 555-1111",
-    "website": "https://example.com",
+    "website": "https://www.gemstate.org/aboutus/gem-state-bakery",
     "image": "images/bakery.webp",
-    "membership": "Gold"
+    "membership": "3"
   },
   {
     "name": "Portneuf Fitness",
     "address": "245 Center Ave, Pocatello, ID",
     "phone": "(208) 555-2222",
-    "website": "https://example.com",
+    "website": "https://visitpocatello.com/wellness-complex/",
     "image": "images/portneuf.jpeg",
-    "membership": "Silver"
+    "membership": "2"
   },
   {
     "name": "High Desert Tech",
     "address": "78 Innovation Way, Pocatello, ID",
     "phone": "(208) 555-3333",
-    "website": "https://example.com",
+    "website": "https://www.highdesert.tech",
     "image": "images/high_desert.jpg",
-    "membership": "Gold"
+    "membership": "3"
   },
   {
     "name": "Snake River Prints",
     "address": "510 Market Blvd, Pocatello, ID",
     "phone": "(208) 555-4444",
-    "website": "https://example.com",
+    "website": "https://snakeriverprinting.com",
     "image": "images/snake_river.webp",
-    "membership": "NP"
+    "membership": "1"
   },
   {
     "name": "Bannock Event Rentals",
     "address": "900 Cedar St, Pocatello, ID",
     "phone": "(208) 555-5555",
-    "website": "https://example.com",
+    "website": "https://snakeriverprinting.com",
     "image": "images/bannock-county.jpg",
-    "membership": "Silver"
-  }
+    "membership": "2"
+  },
+  {
+  "name": "Idaho Central Credit Union",
+  "address": "1700 Hurley Dr, Pocatello, ID",
+  "phone": "(208) 478-3300",
+  "website": "https://www.iccu.com",
+  "image": "images/iccu.webp",
+  "membership": 3
+},
+{
+  "name": "Barrie's Ski & Sports",
+  "address": "624 Yellowstone Ave, Pocatello, ID",
+  "phone": "(208) 232-0900",
+  "website": "https://www.barries.com",
+  "image": "images/barries.webp",
+  "membership": 2
+}
 ]

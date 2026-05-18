@@ -18,8 +18,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/chamber-base.css">
-  <link rel="stylesheet" href="styles/chamber-larger.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/chamber-base.css">
+<link rel="stylesheet" href="styles/chamber-larger.css">
 
   <script src="scripts/chamber-navigation.js" defer></script>
   <script src="scripts/chamber-directory.js" defer></script>
@@ -30,7 +31,7 @@
       <span class="brand-name">Pocatello Chamber</span>
     </div>
 
-    <button id="menu" aria-label="Open navigation menu"></button>
+    <button id="menu" type="button" aria-label="Open navigation menu"></button>
 
     <nav class="navigation">
       <ul>
@@ -55,10 +56,16 @@
   </main>
 
   <footer>
-    <p><strong>Pocatello Chamber of Commerce</strong></p>
-    <p>123 Main Street, Pocatello, ID 83201</p>
-    <p>(208) 555-1234 | info@pocatellochamber.org</p>
-    <p>&copy; 2026 Paxton Porter | WDD231 Chamber Project</p>
-  </footer>
+  <p><strong>Pocatello Chamber of Commerce</strong></p>
+  <p>123 Main Street, Pocatello, ID 83201</p>
+  <p>(208) 555-1234 | info@pocatellochamber.org</p>
+
+  <p>
+    &copy; <span id="currentyear"></span>
+    Paxton Porter | WDD231 Chamber Project
+  </p>
+
+  <p id="lastModified"></p>
+</footer>
 </body>
 </html>

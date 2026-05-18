@@ -151,6 +151,16 @@ main {
   gap: 1rem;
 }
 
+#member-container.list-view .member-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: left;
+}
+
+#member-container.list-view .member-card img {
+  display: none;
+}
+
 .member-card {
   background-color: var(--white);
   padding: 1rem;
