@@ -29,7 +29,7 @@
       <span class="brand-name">Pocatello Chamber</span>
     </div>
 
-    <button id="menu" aria-label="Open navigation menu"></button>
+    <button id="menu" type="button" aria-label="Open navigation menu"></button>
 
     <nav class="navigation">
       <ul>
@@ -61,8 +61,8 @@
         <label for="orgtitle">Organization Title:</label>
         <input type="text" id="orgtitle" name="orgtitle" required 
               autocomplete="organization-title"
-              pattern="[A-Za-z\s\-]{2,}"
-              title="Enter at least 2 characters. Letters, spaces, and hyphens only.">
+              pattern="[A-Za-z\s\-]{7,}"
+              title="Enter at least 7 characters using letters, spaces, or hyphens only.">
 
         <label for="email">Email Address:</label>
         <input type="email" id="email" name="email" required 
@@ -110,6 +110,17 @@
         </ul>
       </article>
 
+      <article class="card membership-card">
+        <h2>Bronze Membership</h2>
+        <p>Affordable membership for small businesses beginning to grow.</p>
+        <ul>
+          <li>Directory listing</li>
+          <li>Networking events</li>
+          <li>Monthly newsletter access</li>
+        </ul>
+        <button id="bronze-open" type="button">Learn More</button>
+      </article>
+
       <article class="card">
         <h2>Silver Membership</h2>
         <p>Great for growing businesses that want more visibility.</p>
@@ -119,6 +130,7 @@
           <li>Training opportunities</li>
           <li>Social media spotlight</li>
         </ul>
+        <button id="silver-open" type="button">Learn More</button>
       </article>
 
       <article class="card">
@@ -130,9 +142,34 @@
           <li>Sponsorship opportunities</li>
           <li>Priority spotlight placement</li>
         </ul>
+        <button id="gold-open" type="button">Learn More</button>
       </article>
     </section>
   </main>
+
+    <dialog id="np-modal">
+      <h3>NP Membership Benefits</h3>
+      <p>No fee membership for nonprofit organizations.</p>
+      <button id="np-close" type="button">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal">
+      <h3>Bronze Membership Benefits</h3>
+      <p>Includes networking events and directory listing.</p>
+      <button id="bronze-close" type="button">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal">
+      <h3>Silver Membership Benefits</h3>
+      <p>Includes promotion opportunities and training events.</p>
+      <button id="silver-close" type="button">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal">
+      <h3>Gold Membership Benefits</h3>
+      <p>Premium spotlight advertising and sponsorship opportunities.</p>
+      <button id="gold-close" type="button">Close</button>
+    </dialog>
 
   <footer>
     <p><strong>Pocatello Chamber of Commerce</strong></p>
