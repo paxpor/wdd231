@@ -44,7 +44,7 @@
   "address": "1700 Hurley Dr, Pocatello, ID",
   "phone": "(208) 478-3300",
   "website": "https://www.iccu.com",
-  "image": "images/iccu.webp",
+  "image": "images/ICCU_logo.jpg",
   "membership": 3
 },
 {
@@ -52,7 +52,7 @@
   "address": "624 Yellowstone Ave, Pocatello, ID",
   "phone": "(208) 232-0900",
   "website": "https://www.barries.com",
-  "image": "images/barries.webp",
+  "image": "images/barries_logo.jpg",
   "membership": 2
 }
 ]
