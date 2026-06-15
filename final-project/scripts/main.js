@@ -88,5 +88,16 @@ if (modal) {
   });
 }
 
+// ===== Visit Counter =====
+const visitCount = Number(localStorage.getItem("visitCount")) || 0;
+localStorage.setItem("visitCount", visitCount + 1);
+
+const visitDisplay = document.getElementById("visit-count");
+
+if (visitDisplay) {
+  visitDisplay.textContent =
+    `You have visited ${visitCount + 1} times.`;
+}
+
 // ===== INIT =====
 loadProducts();

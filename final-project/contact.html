@@ -25,16 +25,19 @@
     <button id="menu-btn" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
 
     <nav id="site-nav" class="nav">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a class="active" href="index.html">Home</a>
+      <a class="active" href="products.html">Products</a>
+      <a class="active" href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
-  <img src="images/hero.jpg" alt="Contact us">
+  <img
+  src="images/hero.jpg"
+  alt="Handcrafted wooden items"
+  loading="lazy">
   <div class="hero-text"><h2>Contact Us</h2></div>
 </section>
 
@@ -55,6 +58,10 @@
 </main>
 
 <footer class="site-footer">
+  <p>
+  Grand & Son's Workshop |
+  Pocatello, Idaho
+  </p>
   <p>&copy; <span id="year"></span></p>
   <p>Last Modified: <span id="lastModified"></span></p>
   <p><a href="attributions.html">Attributions</a></p>

@@ -35,10 +35,10 @@
     <button id="menu-btn" aria-expanded="false" aria-label="Toggle Navigation">☰</button>
 
     <nav id="site-nav" class="nav">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a class="active" href="index.html">Home</a>
+      <a class="active" href="products.html">Products</a>
+      <a class="active" href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -53,16 +53,33 @@
     </div>
   </section>
 
-  <section class="section">
-    <h2>Welcome</h2>
-    <p>We create handcrafted wooden goods with care and tradition.</p>
-  </section>
+  <section class="section grid">
+    <article class="product-card">
+      <h3>Custom Pens</h3>
+      <p>Handcrafted writing instruments.</p>
+    </article>
+
+    <article class="product-card">
+      <h3>Wood Turned Bowls</h3>
+      <p>Made from locally sourced hardwoods.</p>
+    </article>
+
+    <article class="product-card">
+      <h3>Custom Orders</h3>
+      <p>Personalized woodworking projects.</p>
+    </article>
+</section>
 
 </main>
 
 <footer class="site-footer">
+  <p>
+  Grand & Son's Workshop |
+  Pocatello, Idaho
+  </p>
   <p>&copy; <span id="year"></span></p>
   <p>Last Modified: <span id="lastModified"></span></p>
+  <p id="visit-count"></p>
   <p><a href="attributions.html">Attributions</a></p>
 </footer>
 
